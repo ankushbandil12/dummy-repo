@@ -19,9 +19,12 @@ if($method == "POST") {
 	}
 	
 	$response = new \stdClass();
-	$response->speech = "";
-	$response->displayText="";
+	$response->fulfillmentText = "This response is coming from Heroku";
+	$response->fulfillmentMessages=[""];
 	$response->source = "webhook";
+	$response->payload = "";
+	$response->outputContexts = [""];
+	$response->followupEventInput = "";
 	echo json_encode($response);
 	
 }
